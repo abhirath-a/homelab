@@ -1,0 +1,8 @@
+# TLS / Private keys
+*.key
+*.crt
+*.pem
+*.p12
+*.csr
+
+miniflux-admin-credentails
