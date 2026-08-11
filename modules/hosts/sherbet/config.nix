@@ -8,17 +8,6 @@
     {
       imports = [
         self.nixosModules.sherbetHardware
-        # ./hardware-configuration.nix
-        # ../../modules/os/sops.nix
-        # ../../modules/os/networking.nix
-        # ../../modules/os/tailscale.nix
-        # ../../modules/server/glance.nix
-        # ../../modules/server/miniflux.nix
-        # ../../modules/server/navidrome.nix
-        # # ../../modules/server/invidious.nix
-        # ../../modules/server/searxng.nix
-        # ../../modules/server/vaultwarden.nix
-        # # ../../modules/server/dns.nix
       ];
 
       boot.loader.systemd-boot.enable = true;
@@ -52,15 +41,10 @@
       services.logind.settings.Login.HandleLidSwitch = "ignore";
 
       environment.systemPackages = with pkgs; [
-        neovim
         btop
-        fzf
-        ripgrep
         git
-        yt-dlp
         tmux
         nss
-        vim
         age
         sops
       ];
@@ -69,6 +53,6 @@
         "nix-command"
         "flakes"
       ];
-      system.stateVersion = "25.05"; # check documentation before changing
+      system.stateVersion = "25.05"; 
     };
 }

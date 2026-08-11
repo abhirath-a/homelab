@@ -94,16 +94,12 @@
           };
 
           engines = [
-
-            # General web
-
             {
               name = "duckduckgo";
               engine = "duckduckgo";
               shortcut = "ddg";
               categories = [ "general" ];
             }
-
             {
               name = "brave";
               engine = "brave";
@@ -113,14 +109,12 @@
                 "web"
               ];
             }
-
             {
               name = "google";
               engine = "google";
               shortcut = "go";
               categories = [ "general" ];
             }
-
             {
               name = "mojeek";
               engine = "mojeek";
@@ -130,16 +124,12 @@
                 "web"
               ];
             }
-
             {
               name = "marginalia";
               engine = "marginalia";
               shortcut = "mar";
               categories = [ "general" ];
             }
-
-            # Knowledge
-
             {
               name = "wikipedia";
               engine = "wikipedia";
@@ -147,7 +137,6 @@
               categories = [ "general" ];
               display_type = [ "infobox" ];
             }
-
             {
               name = "wikidata";
               engine = "wikidata";
@@ -156,79 +145,66 @@
               display_type = [ "infobox" ];
               weight = 2;
             }
-
             {
               name = "openlibrary";
               engine = "openlibrary";
               shortcut = "ol";
               categories = [ "general" ];
             }
-
             {
               name = "internet archive";
               engine = "internet_archive";
               shortcut = "ia";
               categories = [ "general" ];
             }
-
-            # Science / academia
-
             {
               name = "arxiv";
               engine = "arxiv";
               shortcut = "arx";
               categories = [ "science" ];
             }
-
             {
               name = "astrophysics data system";
               engine = "astrophysics_data_system";
               shortcut = "ads";
               categories = [ "science" ];
             }
-
             {
               name = "pubmed";
               engine = "pubmed";
               shortcut = "pub";
               categories = [ "science" ];
             }
-
             {
               name = "europe pmc";
               engine = "europe_pmc";
               shortcut = "epmc";
               categories = [ "science" ];
             }
-
             {
               name = "semantic scholar";
               engine = "semantic_scholar";
               shortcut = "se";
               categories = [ "science" ];
             }
-
             {
               name = "openalex";
               engine = "openalex";
               shortcut = "oa";
               categories = [ "science" ];
             }
-
             {
               name = "crossref";
               engine = "crossref";
               shortcut = "cr";
               categories = [ "science" ];
             }
-
             {
               name = "inspirehep";
               engine = "inspire";
               shortcut = "insp";
               categories = [ "science" ];
             }
-
             {
               name = "math stackexchange";
               engine = "stackexchange";
@@ -239,30 +215,24 @@
                 "q&a"
               ];
             }
-
             {
               name = "oeis";
               engine = "oeis";
               shortcut = "oeis";
               categories = [ "science" ];
             }
-
-            # Programming / engineering
-
             {
               name = "github";
               engine = "github";
               shortcut = "gh";
               categories = [ "it" ];
             }
-
             {
               name = "github code";
               engine = "github_code";
               shortcut = "ghc";
               categories = [ "it" ];
             }
-
             {
               name = "stackoverflow";
               engine = "stackexchange";
@@ -273,7 +243,6 @@
                 "q&a"
               ];
             }
-
             {
               name = "mdn";
               engine = "json_engine";
@@ -288,7 +257,6 @@
               title_query = "title";
               content_query = "summary";
             }
-
             {
               name = "nixos wiki";
               engine = "mediawiki";
@@ -297,30 +265,24 @@
               base_url = "https://wiki.nixos.org/";
               search_type = "text";
             }
-
             {
               name = "arch linux wiki";
               engine = "archlinux";
               shortcut = "al";
               categories = [ "it" ];
             }
-
             {
               name = "grep.app";
               engine = "grep_app";
               shortcut = "grep";
               categories = [ "it" ];
             }
-
             {
               name = "devdocs";
               engine = "devdocs";
               shortcut = "dev";
               categories = [ "it" ];
             }
-
-            # AI / ML
-
             {
               name = "huggingface";
               engine = "huggingface";
@@ -330,7 +292,6 @@
                 "science"
               ];
             }
-
             {
               name = "huggingface datasets";
               engine = "huggingface";
@@ -341,7 +302,6 @@
                 "science"
               ];
             }
-
             {
               name = "huggingface spaces";
               engine = "huggingface";
@@ -349,37 +309,28 @@
               huggingface_endpoint = "spaces";
               categories = [ "it" ];
             }
-
-            # High quality tech discussion
-
             {
               name = "lobste.rs";
               engine = "lobsters";
               shortcut = "lo";
               categories = [ "it" ];
             }
-
             {
               name = "hackernews";
               engine = "hackernews";
               shortcut = "hn";
               categories = [ "it" ];
             }
-
-            # Utilities
-
             {
               name = "openstreetmap";
               engine = "openstreetmap";
               shortcut = "osm";
             }
-
             {
               name = "currency";
               engine = "currency_convert";
               shortcut = "cc";
             }
-
             {
               name = "wttr.in";
               engine = "wttr";
