@@ -25,6 +25,8 @@
           };
           "invidious_secret_key" = { };
           "invidious_db_password" = { };
+          "wireguard_private_key" = {};
+          "cloudflare_ddns_api_token" = {};
         };
         templates."searxng-env".content = ''
           SEARXNG_SECRET=${config.sops.placeholder."searxng_secret_key"}
