@@ -1,6 +1,6 @@
 {
   flake.nixosModules.sherbetConfig = {
-    networking.hostname = "sherbet";
+    networking.hostName = "sherbet";
     system.stateVersion = "25.05";
   };
 }

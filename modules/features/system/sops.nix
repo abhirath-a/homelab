@@ -10,14 +10,14 @@
       ];
 
       sops = {
-        defaultSopsFile = ../../secrets/secrets.yaml;
+        defaultSopsFile = ../../../secrets/secrets.yaml;
         secrets = {
           "vaultwarden/secrets" = {
-            sopsFile = ../../secrets/vaultwarden.env;
+            sopsFile = ../../../secrets/vaultwarden.env;
             format = "dotenv";
           };
           "miniflux/secrets" = {
-            sopsFile = ../../secrets/miniflux.env;
+            sopsFile = ../../../secrets/miniflux.env;
             format = "dotenv";
           };
           "searxng_secret_key" = {

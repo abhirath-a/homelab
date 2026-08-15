@@ -3,14 +3,17 @@
     modules = with self.nixosModules; [
       sherbetHardware
       sherbetConfig
+      boot
       ddns
-      technitium
+      networking
+      pkgs
+      sops
+      user
       glance
       miniflux
       navidrome
-      networking
       searxng
-      sops
+      technitium
       vaultwarden
       wireguard
     ];
