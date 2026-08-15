@@ -1,4 +1,4 @@
-{ self, inputs, ... }: {
+{
   flake.nixosModules.glance = {
     virtualisation.oci-containers.containers.glance = {
       image = "glanceapp/glance:latest";

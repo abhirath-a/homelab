@@ -1,8 +1,13 @@
-{ self, inputs, ... }: {
+{ inputs, ... }: {
   flake.nixosModules.sops =
-    { config, ... }:
+    { config, pkgs, ... }:
     {
       imports = [ inputs.sops-nix.nixosModules.sops ];
+
+      environment.systemPackages = with pkgs; [
+        age
+        sops
+      ];
 
       sops = {
         defaultSopsFile = ../../secrets/secrets.yaml;
@@ -25,8 +30,8 @@
           };
           "invidious_secret_key" = { };
           "invidious_db_password" = { };
-          "wireguard_private_key" = {};
-          "cloudflare_ddns_api_token" = {};
+          "wireguard_private_key" = { };
+          "cloudflare_ddns_api_token" = { };
         };
         templates."searxng-env".content = ''
           SEARXNG_SECRET=${config.sops.placeholder."searxng_secret_key"}

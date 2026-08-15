@@ -1,19 +1,47 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.networking = {
+{
+  flake.nixosModules.networking = { pkgs, ... }: {
+
+    environment.systemPackages = with pkgs; [
+      btop
+      git
+      tmux
+    ];
+
     networking = {
-      hostName = "sherbet";
       firewall = {
         enable = true;
         allowedTCPPorts = [
           22
           80
           443
+          53
+          5380
+          53443
         ];
-        allowedUDPPorts = [ 41641 ];
+        allowedUDPPorts = [
+          41641
+          53
+        ];
       };
       networkmanager = {
         enable = true;
         dns = "systemd-resolved";
+      };
+
+      interfaces = {
+        wlp2s0 = {
+          allowedTCPPorts = [ 53 ];
+          allowedUDPPorts = [ 53 ];
+        };
+        wg0 = {
+          allowedTCPPorts = [
+            53
+            5380
+            22
+            53443
+          ];
+          allowedUDPPorts = [ 53 ];
+        };
       };
     };
 
