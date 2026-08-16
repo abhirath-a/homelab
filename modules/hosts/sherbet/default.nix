@@ -16,6 +16,7 @@
       technitium
       vaultwarden
       wireguard
+      caddy
     ];
   };
 }

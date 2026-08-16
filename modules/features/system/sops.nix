@@ -33,6 +33,15 @@
           "wireguard_private_key" = { };
           "cloudflare_ddns_api_token" = { };
         };
+
+        templates."caddy.env" = {
+          content = ''
+            CLOUDFLARE_API_TOKEN=${config.sops.placeholder.cloudflare_ddns_api_token}
+          '';
+
+          mode = "0400";
+        };
+
         templates."searxng-env".content = ''
           SEARXNG_SECRET=${config.sops.placeholder."searxng_secret_key"}
         '';
