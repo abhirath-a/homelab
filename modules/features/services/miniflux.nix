@@ -8,7 +8,7 @@
           LISTEN_ADDR = "0.0.0.0:8082";
           RUN_MIGRATIONS = 1;
           CREATE_ADMIN = 1;
-          BASE_URL = "https://miniflux.tail003e53.ts.net/";
+          BASE_URL = "https://miniflux.home.abhirath.net/";
         };
         adminCredentialsFile = config.sops.secrets."miniflux/secrets".path;
       };

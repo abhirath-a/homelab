@@ -15,11 +15,8 @@
           80
           443
           53
-          5380
-          53443
         ];
         allowedUDPPorts = [
-          41641
           53
         ];
       };
@@ -30,12 +27,6 @@
     };
 
     programs.mosh.enable = true;
-
-    services.tailscale = {
-      enable = true;
-      useRoutingFeatures = "both";
-      permitCertUid = "caddy";
-    };
 
     services.openssh = {
       enable = true;
