@@ -29,7 +29,7 @@
           reverse_proxy 127.0.0.1:6767
         '';
         "dns.home.abhirath.net".extraConfig = ''
-          reverse_proxy 127.0.0.1:5380
+          reverse_proxy 127.0.0.1:53443
         '';
       };
     };
