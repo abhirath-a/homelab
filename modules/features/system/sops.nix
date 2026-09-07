@@ -32,6 +32,7 @@
           "invidious_db_password" = { };
           "wireguard_private_key" = { };
           "cloudflare_api_token" = { };
+          "cloudflare_ddns_api_token" = { };
         };
 
         templates."caddy.env" = {
