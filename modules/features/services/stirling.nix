@@ -2,7 +2,7 @@
   flake.nixosModules.stirling = {
     services.stirling-pdf = {
       enable = true;
-      port = 8081;
+      port = 8080;
     };
   };
 }
