@@ -17,6 +17,7 @@
       vaultwarden
       wireguard
       caddy
+      stirling
     ];
   };
 }
