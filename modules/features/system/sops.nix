@@ -31,12 +31,12 @@
           "invidious_secret_key" = { };
           "invidious_db_password" = { };
           "wireguard_private_key" = { };
-          "cloudflare_ddns_api_token" = { };
+          "cloudflare_api_token" = { };
         };
 
         templates."caddy.env" = {
           content = ''
-            CLOUDFLARE_API_TOKEN=${config.sops.placeholder.cloudflare_ddns_api_token}
+            CLOUDFLARE_API_TOKEN=${config.sops.placeholder.cloudflare_api_token}
           '';
 
           mode = "0400";
