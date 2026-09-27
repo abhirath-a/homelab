@@ -10,14 +10,25 @@
 
       environmentFile = config.sops.templates."caddy.env".path;
       globalConfig = ''
-        acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN}
       '';
       virtualHosts = {
         "glance.home.abhirath.net".extraConfig = ''
-          reverse_proxy 127.0.0.1:8081
+        tls {
+          dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+          resolvers 1.1.1.1 1.0.0.1
+        }
+          reverse_proxy 127.0.0.1:8080
         '';
         "miniflux.home.abhirath.net".extraConfig = ''
           reverse_proxy 127.0.0.1:8082
+        '';
+        "ntfy.home.abhirath.net".extraConfig = ''
+          tls {
+            dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+            resolvers 1.1.1.1 1.0.0.1
+          }
+          reverse_proxy 127.0.0.1:4141
         '';
         "navidrome.home.abhirath.net".extraConfig = ''
           reverse_proxy 127.0.0.1:4533
@@ -29,10 +40,19 @@
           reverse_proxy 127.0.0.1:6767
         '';
         "dns.home.abhirath.net".extraConfig = ''
+        tls {
+          dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+          resolvers 1.1.1.1 1.0.0.1
+        }
           reverse_proxy 127.0.0.1:5380
         '';
         "stirling.home.abhirath.net".extraConfig = ''
-          reverse_proxy 127.0.0.1:8080
+
+        tls {
+          dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+          resolvers 1.1.1.1 1.0.0.1
+        }
+          reverse_proxy 127.0.0.1:8081
         '';
       };
     };

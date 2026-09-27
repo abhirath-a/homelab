@@ -18,6 +18,7 @@
       wireguard
       caddy
       stirling
+      ntfy
     ];
   };
 }
