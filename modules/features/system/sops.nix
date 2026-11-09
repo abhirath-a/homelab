@@ -20,6 +20,10 @@
             sopsFile = ../../../secrets/miniflux.env;
             format = "dotenv";
           };
+          "hermes-env" = {
+            sopsFile = ../../../secrets/hermes.env;
+            format = "dotenv";
+          };
           "searxng_secret_key" = {
             # owner = "searxng";
           };

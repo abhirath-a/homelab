@@ -19,6 +19,7 @@
       caddy
       stirling
       ntfy
+      hermes
     ];
   };
 }
