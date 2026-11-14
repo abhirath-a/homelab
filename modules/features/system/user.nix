@@ -17,6 +17,7 @@
         "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMxNbYLgowDjv0Nz/gvxfP/oTECyuFqU0m27OvtZaiboSm3dnf2Lps9yUQAsgWUls5Gu1ijDSQjMHBIY2s8pQTk= #SSH ID - @abhirath"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIzsAiIp0B2m2W6gNwQgnDla3RNNCVLvnblP/ull3uNw arun@DESKTOP-NIL5T2N"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDZ1KTPya0xcIat9G+RkNiXvVMeVoR4Qr+4abhUrKIyI abhi@latitude-wsl"
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEXvomNUg2iGb/m6k9Gg3Z4HW9Kdf4h9HlJdTUHEGKpMRbQQP1Kq5R4Zvha5kQuiPnpt9I0qZVfkB453f9SdRds= normal@secretive.abhi-macbook.local"
       ];
     };
 
