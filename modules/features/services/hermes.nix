@@ -52,7 +52,13 @@ libraries = with pkgs; [
     services.hermes-agent = {
       enable = true;
       addToSystemPackages = true;
-
+      extraPackages = with pkgs; [
+        nodejs
+          pnpm
+          ffmpeg
+          ripgrep
+chromium
+      ];
       container = {
         enable = true;
         backend = "podman";
@@ -77,7 +83,10 @@ libraries = with pkgs; [
           backend = "local";
           timeout = 180;
         };
-
+        browser = {
+          executable_path = "${pkgs.chromium}/bin/chromium";
+          headed = false;
+        };
         memory = {
           memory_enabled = true;
           user_profile_enabled = true;
@@ -87,7 +96,7 @@ libraries = with pkgs; [
           reactions = true;
         };
       };
-
+      cron.wrap_response = false;
       environmentFiles = [
         config.sops.secrets."hermes-env".path
       ];

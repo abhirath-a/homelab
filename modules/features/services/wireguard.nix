@@ -33,7 +33,14 @@
             publicKey = "QL4wL/cCxYnaS89oXlw9cNkf81q94+vZbjMrexAIikQ=";
 
             allowedIPs = [
-              "10.50.0.2/32"
+              "10.50.0.5/32"
+            ];
+          }
+          {
+            # macbook 
+            publicKey = "nttAUQOoKLsVnMiDThZBozU2hV4yF7NOjBZFC7HO1E8=";
+            allowedIPs = [
+            "10.50.0.2/32"
             ];
           }
           {
@@ -44,6 +51,7 @@
               "10.50.0.4/32"
             ];
           }
+          
           {
             # desktop
             publicKey = "HL9kzTATxLIAeSet45HsuZVweXF0/6JV5vdfw4MYv1k=";
